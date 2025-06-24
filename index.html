@@ -37,12 +37,20 @@
             line-height: 1.6;
         }
 
-        .download-section {
-            text-align: center;
-            margin: 20px 0;
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .download-button {
+        .form-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .send-button {
             display: inline-block;
             padding: 15px 30px;
             font-size: 1rem;
@@ -55,29 +63,8 @@
             transition: background-color 0.3s ease;
         }
 
-        .download-button:hover {
+        .send-button:hover {
             background-color: #45a049;
-        }
-
-        .donate-section {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .qr-code img {
-            margin-top: 20px;
-            max-width: 300px;
-            height: auto;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-        }
-
-        input {
-            padding: 10px;
-            width: 80%;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
 
         footer {
@@ -104,42 +91,20 @@
         <section>
             <h2>कैसे डाउनलोड करें?</h2>
             <p>
-                गाने डाउनलोड करने के लिए नीचे दिए गए <strong>DOWNLOAD बटन</strong> पर क्लिक करें। 
-                क्लिक करने के बाद, Google ड्राइव पर एक ZIP फ़ाइल खुलेगी, जिसका साइज लगभग 2GB है। 
+                गाने डाउनलोड करने के लिए आपको ZIP फ़ाइल लिंक मिलेगा। 
                 ZIP फ़ाइल को डाउनलोड करें और उसके बाद इसे एक्सट्रैक्ट करें। 
                 एक्सट्रैक्ट करने के बाद, आप सभी गानों का आनंद ले सकते हैं। 
                 अगर आपको कोई समस्या हो तो कृपया हमें संपर्क करें।
             </p>
         </section>
 
-        <section>
-            <h2>डाउनलोड करने के बाद हमें सहयोग दें</h2>
-            <p>
-                आप हमारे यूट्यूब चैनल के सभी गाने डाउनलोड कर सकते हैं। 
-                इन रीमिक्स गानों को बनाने में बहुत मेहनत लगती है, इसलिए गाने डाउनलोड करने के बाद हमें सपोर्ट करना न भूलें। 
-                आपका सहयोग हमारे लिए महत्वपूर्ण है।
-            </p>
-        </section>
-
-        <section class="download-section">
-            <a class="download-button" href="https://drive.usercontent.google.com/download?id=1b_Tuv4_ps7FDq1hF0CX1AVtJJQaWmrS9&export=download&authuser=0" target="_blank">DOWNLOAD</a>
-        </section>
-
-        <section class="donate-section">
-            <h2>Donate us</h2>
-            <p>यूपीआई नंबर: <strong>vinod.solanki7@ybl</strong></p>
-            <div class="qr-code">
-                <img src="https://i.ibb.co/44fGdVG/IMG-20241205-072619.png" alt="QR Code">
-            </div>
-        </section>
-
-        <section class="donate-section">
+        <section class="form-section">
             <h2>भुगतान विवरण भेजें</h2>
             <p>नीचे अपना मोबाइल नंबर और PhonePe UTR नंबर भरें और "Send on WhatsApp" बटन पर क्लिक करें:</p>
             <form id="whatsappForm" onsubmit="sendToWhatsApp(); return false;">
                 <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br>
                 <input type="text" id="utrNumber" placeholder="PhonePe UTR Number" required><br>
-                <button type="submit" class="download-button">Send on WhatsApp</button>
+                <button type="submit" class="send-button">Send on WhatsApp</button>
             </form>
         </section>
     </main>

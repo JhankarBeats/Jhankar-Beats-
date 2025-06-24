@@ -66,10 +66,18 @@
 
         .qr-code img {
             margin-top: 20px;
-            max-width: 300px; /* Larger QR code size */
+            max-width: 300px;
             height: auto;
             border: 2px solid #ddd;
             border-radius: 8px;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         footer {
@@ -96,7 +104,7 @@
         <section>
             <h2>कैसे डाउनलोड करें?</h2>
             <p>
-                गाने डाउनलोड करने के लिए नीचे दिए गए **DOWNLOAD बटन** पर क्लिक करें। 
+                गाने डाउनलोड करने के लिए नीचे दिए गए <strong>DOWNLOAD बटन</strong> पर क्लिक करें। 
                 क्लिक करने के बाद, Google ड्राइव पर एक ZIP फ़ाइल खुलेगी, जिसका साइज लगभग 2GB है। 
                 ZIP फ़ाइल को डाउनलोड करें और उसके बाद इसे एक्सट्रैक्ट करें। 
                 एक्सट्रैक्ट करने के बाद, आप सभी गानों का आनंद ले सकते हैं। 
@@ -121,12 +129,41 @@
             <h2>Donate us</h2>
             <p>यूपीआई नंबर: <strong>vinod.solanki7@ybl</strong></p>
             <div class="qr-code">
-                <img src="https://i.ibb.co/44fGdVG/IMG-20241205-072619.png" alt="IMG-20241205-072619" border="0">
+                <img src="https://i.ibb.co/44fGdVG/IMG-20241205-072619.png" alt="QR Code">
             </div>
         </section>
+
+        <section class="donate-section">
+            <h2>भुगतान विवरण भेजें</h2>
+            <p>नीचे अपना मोबाइल नंबर और PhonePe UTR नंबर भरें और "Send on WhatsApp" बटन पर क्लिक करें:</p>
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(); return false;">
+                <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br>
+                <input type="text" id="utrNumber" placeholder="PhonePe UTR Number" required><br>
+                <button type="submit" class="download-button">Send on WhatsApp</button>
+            </form>
+        </section>
     </main>
+
     <footer>
         &copy; 2024 बॉलीवुड झंकार बीट्स रीमिक्स गाने
     </footer>
+
+    <script>
+    function sendToWhatsApp() {
+        var mobile = document.getElementById("mobileNumber").value.trim();
+        var utr = document.getElementById("utrNumber").value.trim();
+
+        if (mobile === "" || utr === "") {
+            alert("कृपया मोबाइल नंबर और UTR नंबर भरें।");
+            return;
+        }
+
+        var message = "नया भुगतान विवरण:\n📱 मोबाइल नंबर: " + mobile + "\n📄 PhonePe UTR नंबर: " + utr;
+        var encodedMessage = encodeURIComponent(message);
+        var whatsappLink = "https://wa.me/918861875777?text=" + encodedMessage;
+
+        window.open(whatsappLink, '_blank');
+    }
+    </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Protected Download</title></head>
+<body>
+<h2>Enter Password to Download</h2>
+<form onsubmit="checkPassword(event)">
+  <input type="password" id="password" placeholder="Enter password" required>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  function checkPassword(event) {
+    event.preventDefault();
+    const password = document.getElementById('password').value;
+    if (password === "12345") {
+      window.location.href = "https://drive.usercontent.google.com/download?id=1b_Tuv4_ps7FDq1hF0CX1AVtJJQaWmrS9&export=download&authuser=0";
+    } else {
+      alert("Wrong password. Try again.");
+    }
+  }
+</script>
+</body>
+</html>

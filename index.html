@@ -45,7 +45,7 @@
             border-radius: 5px;
         }
 
-        .form-section {
+        .form-section, .qr-code-section {
             text-align: center;
             margin-top: 30px;
         }
@@ -65,6 +65,14 @@
 
         .send-button:hover {
             background-color: #45a049;
+        }
+
+        .qr-code img {
+            margin-top: 20px;
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
         }
 
         footer {
@@ -106,6 +114,14 @@
                 <input type="text" id="utrNumber" placeholder="PhonePe UTR Number" required><br>
                 <button type="submit" class="send-button">Send on WhatsApp</button>
             </form>
+        </section>
+
+        <section class="qr-code-section">
+            <h2>PhonePe द्वारा सहयोग करें</h2>
+            <p>यूपीआई नंबर: <strong>vinod.solanki7@ybl</strong></p>
+            <div class="qr-code">
+                <img src="https://i.ibb.co/44fGdVG/IMG-20241205-072619.png" alt="PhonePe QR Code" border="0">
+            </div>
         </section>
     </main>
 

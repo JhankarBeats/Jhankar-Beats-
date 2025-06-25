@@ -88,6 +88,16 @@
     </header>
 
     <main>
+
+        <section class="form-section">
+            <h2>Secure Payment भुगतान विवरण भेजें</h2>
+            <p>नीचे अपना मोबाइल नंबर और PhonePe UTR नंबर भरें और "Send on WhatsApp" बटन पर क्लिक करें:</p>
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(); return false;">
+                <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br>
+                <input type="text" id="utrNumber" placeholder="PhonePe UTR Number" required><br>
+                <button type="submit" class="send-button">Send on WhatsApp</button>
+            </form>
+        </section><br>
         <!-- QR Code at the Top -->
         <section class="qr-code-section">
             <h2>Rs-100 PhonePe द्वारा भेजे</h2>
@@ -177,15 +187,7 @@
             </p>
         </section>
 
-        <section class="form-section">
-            <h2>भुगतान विवरण भेजें</h2>
-            <p>नीचे अपना मोबाइल नंबर और PhonePe UTR नंबर भरें और "Send on WhatsApp" बटन पर क्लिक करें:</p>
-            <form id="whatsappForm" onsubmit="sendToWhatsApp(); return false;">
-                <input type="text" id="mobileNumber" placeholder="Mobile Number" required><br>
-                <input type="text" id="utrNumber" placeholder="PhonePe UTR Number" required><br>
-                <button type="submit" class="send-button">Send on WhatsApp</button>
-            </form>
-        </section>
+        
     </main>
 
     <footer>
